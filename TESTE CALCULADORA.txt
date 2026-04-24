@@ -1,0 +1,12 @@
+TESTE CALCULADORA
+
+1- É uma calculadora com funções básicas.
+2- possui duas entradas numéricas e quatro botões com a funcionalidade de somar, subtrair, multiplicar e dividir.
+
+plano do teste:
+
+1** Primeiro vou testar se cada entrada e verificar que só recebe numero.
+2** vou verificar que sempre que um campo estiver vazio, uma mensagem é enviada ao usuário solicitando 
+    que ele insira um numero valido.
+3** Após disso, vou verificar se cada botão executa sua função: somar, subtrair, multiplicar e dividir.
+4** Se tudo funcionar corretamente, entregarei a calculadora ao cliente.
