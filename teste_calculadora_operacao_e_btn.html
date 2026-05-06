@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Calculadora</title>
+</head>
+
+<body>
+  <h1>Calculadora Simple</h1>
+
+
+  <input type="number" id="num1" name="num1" placeholder="Número 1">
+  <input type="number" id="num2" name="num2" placeholder="Número 2">
+  <div id="resultado"></div><br>
+  <div id="mensagemTeste"></div><br>
+  <div id="testeBtnSomar"></div><br>
+  <div id="testeBtnRestar"></div><br>
+  <div id="testeBtnMultiplicar"></div><br>
+  <div id="testeBtnDividir"></div><br>
+  <button onclick="somar()" id="btnSomar">Somar</button>
+  <button onclick="restar()" id="btnRestar">Restar</button>
+  <button onclick="multiplicar()" id="btnMultiplicar">Multiplicar</button>
+  <button onclick="dividir()" id="btnDividir">Dividir</button>
+  <button onclick="testar()">Testar</button>
+  <button onclick="testarBotao()">Testar Botao</button>
+
+
+
+
+  <p>Esta es una calculadora simple<br>que solo contiene funciones basicas</p>
+
+  <script>
+
+    function testar() {
+      document.getElementById("num1").value = 5
+      document.getElementById("num2").value = 5
+      multiplicar()
+      if (document.getElementById("resultado").innerHTML == "Resultado: 25") {
+        document.getElementById("mensagemTeste").innerHTML = "O teste da operacao deu certo"
+      }
+      else {
+        document.getElementById("mensagemTeste").innerHTML = "O teste da operacao deu Error"
+      }
+    }
+
+    function testarBotao() {
+      const botaoSomar = document.getElementById("btnSomar");
+      const botaoRestar = document.getElementById("btnRestar");
+      const botaoMultiplicar = document.getElementById("btnMultiplicar");
+      const botaoDividir = document.getElementById("btnDividir");
+
+      if (botaoSomar) {
+        document.getElementById("testeBtnSomar").innerHTML = "Botao Somar Encontrado"
+      }
+      else {
+        document.getElementById("testeBtnSomar").innerHTML = "Botao Somar não Encontrado"
+      }
+      if (botaoRestar) {
+        document.getElementById("testeBtnRestar").innerHTML = "Botao Restar Encontrado"
+      }
+      else {
+        document.getElementById("testeBtnRestar").innerHTML = "Botao Restar não Encontrado"
+      }
+      if (botaoMultiplicar) {
+        document.getElementById("testeBtnMultiplicar").innerHTML = "Botao Multiplicar Encontrado"
+      }
+      else {
+        document.getElementById("testeBtnMultiplicar").innerHTML = "Botao Multiplicar não Encontrado"
+      }
+      if (botaoDividir) {
+        document.getElementById("testeBtnDividir").innerHTML = "Botao Dividir Encontrado"
+      }
+      else {
+        document.getElementById("testeBtnDividir").innerHTML = "Botao Dividir não Encontrado"
+      }
+    }
+
+    function somar() {
+      const n1 = parseFloat(document.getElementById("num1").value);
+      const n2 = parseFloat(document.getElementById("num2").value);
+
+      if (isNaN(n1) || isNaN(n2)) {
+        document.getElementById("resultado").innerHTML =
+          "Por favor, digite números válidos.";
+      } else {
+        document.getElementById("resultado").innerHTML =
+          "Resultado: " + (n1 + n2);
+      }
+    }
+    function restar() {
+      const n1 = parseFloat(document.getElementById("num1").value);
+      const n2 = parseFloat(document.getElementById("num2").value);
+
+      if (isNaN(n1) || isNaN(n2)) {
+        document.getElementById("resultado").innerHTML =
+          "Por favor, digite números válidos.";
+      } else {
+        document.getElementById("resultado").innerHTML =
+          "Resultado: " + (n1 - n2);
+      }
+    }
+    function multiplicar() {
+      const n1 = parseFloat(document.getElementById("num1").value);
+      const n2 = parseFloat(document.getElementById("num2").value);
+
+      if (isNaN(n1) || isNaN(n2)) {
+        document.getElementById("resultado").innerHTML =
+          "Por favor, digite números válidos.";
+      } else {
+        document.getElementById("resultado").innerHTML =
+          "Resultado: " + (n1 * n2);
+      }
+    }
+    function dividir() {
+      const n1 = parseFloat(document.getElementById("num1").value);
+      const n2 = parseFloat(document.getElementById("num2").value);
+
+      if (isNaN(n1) || isNaN(n2)) {
+        document.getElementById("resultado").innerHTML =
+          "Por favor, digite números válidos.";
+      } else {
+        document.getElementById("resultado").innerHTML =
+          "Resultado: " + (n1 / n2);
+      }
+    }
+  </script>
+
+</body>
+
+</html>
